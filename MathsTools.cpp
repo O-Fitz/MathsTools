@@ -94,6 +94,14 @@ Vector2 Vector2::normalise() {
     return normaliseV2(Vector2(x, y));
 }
 
+Vector2 Vector2::getParallelVector(Vector2 vec1) {
+    Vector2  thisVec = Vector2(x, y);
+    return  thisVec * dot(thisVec, vec1) / dot(thisVec, thisVec);
+}
+
+Vector2 Vector2::getPerpendicularVector(Vector2 vec1) {
+    return vec1 - getParallelVector(vec1);
+}
 
 // 3D VECTOR
 
@@ -202,6 +210,14 @@ Vector3 Vector3::normalise() {
     return normaliseV3(Vector3(x, y, z));
 }
 
+Vector3 Vector3::getParallelVector(Vector3 vec1) {
+    Vector3  thisVec = Vector3(x, y, z);
+    return  thisVec * dot(thisVec, vec1) / dot(thisVec, thisVec);
+}
+
+Vector3 Vector3::getPerpendicularVector(Vector3 vec1) {
+    return vec1 - getParallelVector(vec1);
+}
 
 // 4D VECTOR
 
@@ -318,7 +334,14 @@ Vector4 Vector4::normalise() {
     return normaliseV4(Vector4(x, y, z, w));
 }
 
+Vector4 Vector4::getParallelVector(Vector4 vec1) {
+    Vector4 thisVec = Vector4(x, y, z, w);
+    return thisVec * dot(thisVec, vec1) / dot(thisVec, thisVec);
+}
 
+Vector4 Vector4::getPerpendicularVector(Vector4 vec1) {
+    return vec1 - getParallelVector(vec1);
+}
 
 
 // FUNCTION DEFS

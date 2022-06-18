@@ -26,6 +26,8 @@ struct Vector2{
     double dotc(const Vector2& v1);
     double abs();
     Vector2 normalise();
+    Vector2 getParallelVector(Vector2 vec1);
+    Vector2 getPerpendicularVector(Vector2 vec1);
 
     double x;
     double y;
@@ -52,6 +54,8 @@ struct Vector3{
     Vector3 crossc(const Vector3& v1); // NOTE: Only the 3D vectors have a cross product
     double abs();
     Vector3 normalise();
+    Vector3 getParallelVector(Vector3 vec1);
+    Vector3 getPerpendicularVector(Vector3 vec1);
 
     double x;
     double y;
@@ -78,6 +82,8 @@ struct Vector4{
     double dotc(const Vector4& v1);
     double abs();
     Vector4 normalise();
+    Vector4 getParallelVector(Vector4 vec1);
+    Vector4 getPerpendicularVector(Vector4 vec1);
 
     double x;
     double y;
