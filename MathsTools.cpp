@@ -33,8 +33,8 @@ Vector2 Vector2::operator+(const Vector2& v1) {
 
 Vector2 Vector2::operator-(const Vector2& v1) {
     Vector2 result;
-    result.x = v1.x - x;
-    result.y = v1.y - y;
+    result.x = x - v1.x;
+    result.y = y - v1.y;
     return result;
 }
 
@@ -139,9 +139,9 @@ Vector3 Vector3::operator+(const Vector3& v1) {
 
 }Vector3 Vector3::operator-(const Vector3& v1) {
     Vector3 result;
-    result.x = v1.x - x;
-    result.y = v1.y - y;
-    result.z = v1.z - z;
+    result.x = x - v1.x;
+    result.y = y - v1.y;
+    result.z = z - v1.z;
     return result;
 }
 
@@ -261,10 +261,10 @@ Vector4 Vector4::operator+(const Vector4& v1) {
 
 Vector4 Vector4::operator-(const Vector4& v1) {
     Vector4 result;
-    result.x = v1.x - x;
-    result.y = v1.y - y;
-    result.z = v1.z - z;
-    result.w = v1.w - w;
+    result.x = x - v1.x;
+    result.y = y - v1.y;
+    result.z = z - v1.z;
+    result.w = w - v1.w;
     return result;
 }
 
